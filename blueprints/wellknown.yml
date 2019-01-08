@@ -1,0 +1,41 @@
+type: group
+fields:
+  WellKnownRobots:
+    label: robots.txt
+    type: textarea
+    buttons: false
+    counter: false
+    size: small
+    translate: false
+    width: 1/2
+    help: 'See <a href="https://www.sitemaps.org">sitemaps.org</a> for information. Do not include details for sitemaps as the appropriate entry/entries are automatically generated.'
+
+  WellKnownSecurity:
+    label: security.txt
+    type: textarea
+    buttons: false
+    counter: false
+    size: small
+    translate: false
+    width: 1/2
+    help: 'See <a href="https://securitytxt.org">securitytxt.org</a> for information.'
+
+  WellKnownDNTpolicy:
+    label: dnt-policy.txt
+    type: textarea
+    buttons: false
+    counter: false
+    size: small
+    translate: false
+    width: 1/2
+    help: See EFF's <a href="https://eff.org/dnt-policy">A privacy-friendly Do Not Track (DNT) Policy</a> for an example.
+
+  WellKnownHumans:
+    label: humans.txt
+    type: textarea
+    buttons: false
+    counter: false
+    size: small
+    translate: false
+    width: 1/2
+    help: See <a href="http://humanstxt.org">humanstxt.org</a> for more information
