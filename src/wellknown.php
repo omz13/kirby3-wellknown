@@ -22,7 +22,7 @@ use function strlen;
 use function strtolower;
 use function substr;
 
-define( 'WK_VERSION', '0.0.0' );
+define( 'WK_VERSION', '0.1.0' );
 define( 'WK_CONFIGURATION_PREFIX', 'omz13.wellknown' );
 
 class K3WellKnown
