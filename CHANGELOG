@@ -3,4 +3,6 @@ VERSION 0  BETA
 ===============
 
    Version 0.1 - beta
+      10/01/2019 15:52  0.1.1  beta
+         8b6bb58 Fix: funny++; Closes #1
       08/01/2019 18:28  0.1.0  initial release
