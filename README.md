@@ -5,7 +5,7 @@
 
 ## Coffee, Beer, etc.
 
-This started as a simple plugin. The idea was to have a nice way to set some text files that live in the `.well-known` folder. During development I had endless hours disappearing down the rabbit hole that is the specifications for the different files that could exist there. I have held back and kept this plugin deliberately simple, and hope that you do use it because providing these well-known files is a good thing to do. Under-the-hood it has some complicated code to make this really easy for the user. It also generates `/robots.txt` because I just needed an excuse to integrate with my [omz13/kirby3-xmlsitemap](https://github.com/omz13/kirby3-xmlsitemap) plugin. It also has a built-in blueprint because I wanted to waste hours of time getting this to work (and I'm still not sure why that took me some long: perhaps I have no idea what I am doing and eventually hit on the magic incantation within the code by random luck of hitting the keyboard enough times? Did Bastian fix something in Kirby? Were my MAMP settings wrong? Who cares because it now work and it is really cool).
+This started as a simple plugin. The idea was to have a nice way to set some text files that live in the `.well-known` folder. During development I had endless hours disappearing down the rabbit hole that is the specifications for the different files that could exist there. I have held back and kept this plugin deliberately simple, and hope that you do use it because providing these well-known files is a good thing to do. Under-the-hood it has some complicated code to make this really easy for the user. It also generates `/robots.txt` because I just needed an excuse to integrate with my [omz13/kirby3-xmlsitemap](https://github.com/omz13/kirby3-xmlsitemap) plugin. It also has a built-in blueprint because I wanted to waste hours of time getting this to work (and I'm still not sure why that took me some long: perhaps I have no idea what I am doing and eventually hit on the magic incantation within the code by random luck of hitting the keyboard enough times? Did Bastian fix something in Kirby? Were my MAMP settings wrong? Who cares because it now works and it is really cool. There are now no spelling mistakes in this README now that I have tweaked my code editor ([Atom](https://atom.io)) to spellcheck.
 
 This plugin is free but if you use it in a commercial project to show your support you are welcome to:
 - [make a donation 🍻](https://www.paypal.me/omz13/10) or
@@ -72,7 +72,7 @@ If your project itself is under git, then you need to add the plugin as a submod
 
 ### Configuration
 
-The following mechanisms can be used to modify the plugin's behaviour.
+The following mechanisms can be used to modify the plugin's behavior.
 
 #### via `site/config/config.php`
 
