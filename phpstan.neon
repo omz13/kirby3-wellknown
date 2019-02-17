@@ -11,6 +11,7 @@ parameters:
 		- '#Cannot call method code\(\) on Kirby\\Cms\\Language|null.#'
 		- '#Call to static method isEnabled\(\) on an unknown class omz13\\XMLSitemap.#'
 		- '#Binary operation "." between string and array|Kirby\\Cms\\Field results in an error.#'
+		- '#Used constant WK_[A-Z_]+ not found.#'
 	tmpDir: %rootDir%/tmp
 	level: 5
 includes:

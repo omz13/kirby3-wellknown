@@ -26,15 +26,10 @@ When would you use this plugin?
 - to provide any other (text-based) file in the `.well-known` folder.
 - to provide [/robots.txt](https://en.wikipedia.org/wiki/Robots_exclusion_standard).
 
-
 The functional specification:
 
 - The contents for a well-known file are derived from, in order of priority, an entry from a configuration file, c.f. `site/config/config.php`, or a field in `content/site.txt`.
 - For `robots.txt` file, the `sitemap` content is _automatically_ generated (i.e. interacts with [omz13/kirby3-xmlsitemap](https://github.com/omz13/kirby3-xmlsitemap)) and prepended to whatever else you want.
-
-#### Caveat
-
-Kirby3 is under beta, therefore this plugin, and indeed kirby3 itself, may or may not play nicely with each other, or indeed work at all: use it for testing purposes only; if you use it in production then you should be aware of the risks and know what you are doing.
 
 #### Roadmap
 
@@ -47,28 +42,11 @@ The non-binding list of planned features and implementation notes are:
 
 ### Installation
 
-#### via composer
+Pick one of the following per your epistemological model:
 
-If your kirby3-based site is managed using-composer, simply invoke `composer require omz13/kirby3-wellknown`, or add `omz13/kirby3-wellknown` to the "require" component of your site's `composer.json` as necessary, e.g. to be on the bleeding-edge:
-
-```yaml
-"require": {
-  ...
-  "omz13/kirby3-wellknown": "dev-master as 1.0.0",
-  ...
-}
-```
-#### via git
-
-Clone github.com/omz13/kirby3-wellknown into your `site/plugins` and then in `site/plugins/kirby3-wellknown` invoke ``composer update --no-dev`` to generate the `vendor` folder and the magic within.
-
-```sh
-$ git clone github.com/omz13/kirby3-wellknown site/plugins/kirby3-wellknown
-$ cd site/plugins/kirby3-wellknown
-$ composer update --no-dev
-```
-
-If your project itself is under git, then you need to add the plugin as a submodule and possibly automate the composer update; it is assumed if you are doing this that you know what to do.
+- `composer require --no-dev omz13/kirby3-wellknow`; the plugin will automagically appear in `site/plugins`.
+- Download a zip of the latest release - [master.zip](https://github.com/omz13/kirby3-wellknow/archive/master.zip) - and copy the contents to your `site/plugins/kirby3-wellknow`.
+- `git submodule add https://github.com/omz13/kirby3-wellknow.git site/plugins/kirby3-wellknow`.
 
 ### Configuration
 
@@ -120,9 +98,9 @@ Hint: If you want to see what is in this blueprint, look in the source code unde
 
 3. If it works, see _Coffee, Beer, etc_ above
 
-4. If it doesn't work... file an issue and I will bang my head against the wall while I fix things.
+4. If it doesn't work... file an issue and I will bang my head against the wall while I fix things; or perhaps I'll just sulk, have a cup of really stong coffee, and the got fix thing.
 
-5. Be amazed how my README are either more funny or less funny.
+5. Be amazed how my README are either more funny or less funny with each push to the repo; YMMV.
 
 #### Debug mode
 

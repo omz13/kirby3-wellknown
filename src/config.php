@@ -40,7 +40,6 @@ Kirby::plugin(
             return omz13\K3WellKnown::processRequest( "humans", "txt" );
           },
         ],
-
       ],
     ]
 );

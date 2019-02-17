@@ -1,5 +1,6 @@
 {
   "name": "omz13/kirby3-wellknown",
+  "type": "kirby-plugin",
   "description": "kirby3 plugin to suport well-known files",
   "keywords": [
     "kirby3",
@@ -17,50 +18,28 @@
   ],
   "require": {
     "php": ">=7.1",
-    "getkirby/cms": "^3.0.0-RC-2.0"
+    "getkirby/composer-installer": "^1.1"
   },
   "require-dev": {
+    "getkirby/cms": "^3.0.1",
     "jakub-onderka/php-parallel-lint": "^1.0",
-    "liip/rmt": "^1.4",
-    "localheinz/composer-normalize": "^0.8.0",
+    "localheinz/composer-normalize": "^1.0.0",
     "omz13/omz13-coding-standard": "dev-master",
     "phpcompatibility/php-compatibility": "^8.2",
     "phpmd/phpmd": "^2.6",
-    "phpstan/phpstan": "^0.10.8",
+    "phpstan/phpstan": "^0.10.3",
     "phpstan/phpstan-strict-rules": "^0.10.1",
-    "squizlabs/php_codesniffer": "^3.4"
+    "roave/security-advisories": "dev-master"
   },
   "config": {
     "optimize-autoloader": true,
     "sort-packages": true
   },
   "autoload": {
-    "files": [
-      "src/config.php"
-    ]
-  },
-  "archive": {
-    "exclude": [
-      ".*",
-      "kirby",
-      "makefile",
-      "*.xml",
-      "!/vendor/*",
-      "/vendor/*/*/.*",
-      "/vendor/*/*/docs/*",
-      "/vendor/*/*/example/*",
-      "/vendor/*/*/examples/*",
-      "/vendor/*/*/test/*",
-      "/vendor/*/*/tests/*",
-      "/vendor/*/*/php4/*"
-    ]
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/k-next/kirby"
+    "psr-4": {
+      "omz13\\": "src/"
     }
-  ],
+  },
   "minimum-stability": "beta",
   "scripts": {
     "build": [
@@ -81,14 +60,6 @@
       "@mess"
     ],
     "stan": "./vendor/bin/phpstan analyse --level 7 ./src",
-    "style": "./vendor/bin/phpcs ./src/*",
-    "zip": [
-      "composer install --no-dev",
-      "composer remove getkirby/cms",
-      "composer dumpautoload -o",
-      "composer archive --format=zip --dir=dist",
-      "composer require getkirby/cms:'^3.0.0-RC-2.0'",
-      "composer dumpautoload -o"
-    ]
+    "style": "./vendor/bin/phpcs ./src/*"
   }
 }
