@@ -2,6 +2,11 @@
 VERSION 0  BETA
 ===============
 
+   Version 0.2 - beta
+      17/02/2019 20:37  0.2.0  initial release
+         366b954 Feat: install by zip or submodule; fix #3
+         e5abf7c Fix #2
+
    Version 0.1 - beta
       10/01/2019 15:52  0.1.1  beta
          8b6bb58 Fix: funny++; Closes #1
