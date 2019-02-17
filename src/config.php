@@ -34,6 +34,13 @@ Kirby::plugin(
             return omz13\K3WellKnown::processRequest( "robots", "txt" );
           },
         ],
+        [
+          'pattern' => 'humans.txt',
+          'action'  => function () {
+            return omz13\K3WellKnown::processRequest( "humans", "txt" );
+          },
+        ],
+
       ],
     ]
 );
