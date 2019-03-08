@@ -44,9 +44,9 @@ The non-binding list of planned features and implementation notes are:
 
 Pick one of the following per your epistemological model:
 
-- `composer require --no-dev omz13/kirby3-wellknow`; the plugin will automagically appear in `site/plugins`.
-- Download a zip of the latest release - [master.zip](https://github.com/omz13/kirby3-wellknow/archive/master.zip) - and copy the contents to your `site/plugins/kirby3-wellknow`.
-- `git submodule add https://github.com/omz13/kirby3-wellknow.git site/plugins/kirby3-wellknow`.
+- `composer require omz13/kirby3-wellknown`; the plugin will automagically appear in `site/plugins`.
+- Download a zip of the latest release - [master.zip](https://github.com/omz13/kirby3-wellknown/archive/master.zip) - and copy the contents to your `site/plugins/kirby3-wellknown`.
+- `git submodule add https://github.com/omz13/kirby3-wellknown.git site/plugins/kirby3-wellknown`.
 
 ### Configuration
 
