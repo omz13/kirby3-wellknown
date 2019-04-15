@@ -3,6 +3,13 @@ VERSION 0  BETA
 ===============
 
    Version 0.2 - beta
+      15/04/2019 12:18  0.2.1  beta
+         e2ded08 Chore: composer update
+         a14fed0 Chore: style
+         460516a Docs: I never got around to implementing fromSite. So undocumented it is now.
+         465b759 Fix #4
+         a52da72 Fix: better handling (especially string in array instead of string)
+         7264b93 Docs: get install right (oh my fat fingers were on overtime)
       17/02/2019 20:37  0.2.0  initial release
          366b954 Feat: install by zip or submodule; fix #3
          e5abf7c Fix #2
