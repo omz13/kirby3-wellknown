@@ -5,17 +5,22 @@ namespace omz13;
 use Kirby;
 use Kirby\Toolkit\A;
 
+use const CASE_LOWER;
 use const INPUT_SERVER;
+use const PHP_EOL;
 use const WK_CONFIGURATION_PREFIX;
 use const WK_VERSION;
 
+use function array_change_key_case;
 use function array_key_exists;
 use function class_exists;
+use function count;
 use function define;
 use function filter_input;
 use function header;
 use function in_array;
 use function is_array;
+use function is_string;
 use function kirby;
 use function str_replace;
 use function strlen;
@@ -46,11 +51,13 @@ class K3WellKnown
     // try to pick up configuration as a discrete (vendor.plugin.key=>value)
     $o = kirby()->option( WK_CONFIGURATION_PREFIX . '.' . $key );
     if ( $o != null ) {
-      if ( is_string( $o ) )
+      if ( is_string( $o ) ) {
         return $o;
+      }
       // array'd string? i.e. [ 'string' ] instead of 'string'
-      if ( is_array( $o ) && count( $o ) == 1 && is_string( $o[0] ) )
+      if ( is_array( $o ) && count( $o ) == 1 && is_string( $o[0] ) ) {
           return $o[0];
+      }
     }
 
     // this should not be reached... because plugin should define defaults for all its options...
@@ -59,6 +66,7 @@ class K3WellKnown
 
   /**
    * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+   * @SuppressWarnings(PHPMD.NPathComplexity)
    */
   private static function getRobots() : string {
     $r  = '# Any use of this file - robots.txt -  or failure' . "\n";
