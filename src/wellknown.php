@@ -112,7 +112,14 @@ class K3WellKnown
       $r .= '# Sitemap not provided' . "\n";
     }//end if
 
-    $x = kirby()->site()->content()->get( 'wkRobots' );
+    $x = static::getConfigurationForKey( 'the-robots' );
+    if ( $x == null || $x == "" ) {
+      $x = kirby()->site()->content()->get( 'wkRobots' );
+    } else {
+      // expand \n, etc .
+      $x = str_replace( '\n', PHP_EOL, $x );
+    }
+
     if ( $x != null && $x != "" ) {
       return $r . "\n" . $x . "\n";
     }
@@ -172,7 +179,7 @@ class K3WellKnown
 
     $r = static::getConfigurationForKey( 'the-' . str_replace( '-', '', $whatever ) );
     if ( $r != null && $r != "" ) {
-      return new Kirby\Cms\Response( $r, 'text/plain', 200, [ "x-omz13-wk" => "from-c" ] );
+      return new Kirby\Cms\Response( str_replace( '\n', PHP_EOL, $r ), 'text/plain', 200, [ "x-omz13-wk" => "from-c" ] );
     }
 
     $wants = 'wellknown' . strtolower( str_replace( '-', '', $whatever ) );

@@ -62,7 +62,7 @@ The following mechanisms can be used to modify the plugin's behavior.
 
 - `omz13.wellknown.fromSite` - optional - default `false` - a boolean which, if `true`, causes the content for a well-known file from the site file (`content/Site.txt` which is set by the panel via `blueprint/site.yml`) to be used in preference to that from the configuration file (`site/config/config.php`). Wow. That was a complicated. In other words, if this is `true`, the user can specify the content in the panel, but if false the content can only be specified in the configuration file (for those times when you do not want a user to be able to change things).
 
-- `omz13.wellknown.the-XXXX` - optional - the content to provide for a request to `.well-known/XXXX.txt`. Note that hyphens are ignored (e.g. `dnt-policy` would be specified as `omz13.wellknown.the-dntpolicy`.)
+- `omz13.wellknown.the-XXXX` - optional - a string which provides the content for a request to `.well-known/XXXX.txt` (or `the-robots` for `/robots.txt`). Note that hyphens are ignored (e.g. `dnt-policy` would be specified as `omz13.wellknown.the-dntpolicy`). Additionally, line expansion is performed (i.e. any occurrences of `\n` will be replaced by a newline).
 
 - `omz13.wellknown.x-ping` - optional - if `true`, then any request to `/.well-known/ping.txt` will return a very boring and vanilla response of `pong`. Why would you use this? Because it is a very sweet endpoint to test against to see if your site is alive.
 
