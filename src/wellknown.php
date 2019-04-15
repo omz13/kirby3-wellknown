@@ -36,14 +36,21 @@ class K3WellKnown
   private static function getConfigurationForKey( string $key ) : string {
     // Try to pick up configuration when provided in an array (vendor.plugin.array(key=>value))
     $o = kirby()->option( WK_CONFIGURATION_PREFIX );
-    if ( $o != null && is_array( $o ) && array_key_exists( $key, $o ) ) {
-      return $o[$key];
+    if ( $o != null && is_array( $o ) ) {
+      $oLC = array_change_key_case( $o, CASE_LOWER );
+      if ( array_key_exists( strtolower( $key ) , $oLC ) ) {
+        return $oLC[ strtolower( $key ) ];
+      }
     }
 
     // try to pick up configuration as a discrete (vendor.plugin.key=>value)
     $o = kirby()->option( WK_CONFIGURATION_PREFIX . '.' . $key );
     if ( $o != null ) {
-      return $o;
+      if ( is_string( $o ) )
+        return $o;
+      // array'd string? i.e. [ 'string' ] instead of 'string'
+      if ( is_array( $o ) && count( $o ) == 1 && is_string( $o[0] ) )
+          return $o[0];
     }
 
     // this should not be reached... because plugin should define defaults for all its options...
