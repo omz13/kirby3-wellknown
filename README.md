@@ -98,7 +98,7 @@ Hint: If you want to see what is in this blueprint, look in the source code unde
 
 3. If it works, see _Coffee, Beer, etc_ above
 
-4. If it doesn't work... file an issue and I will bang my head against the wall while I fix things; or perhaps I'll just sulk, have a cup of really stong coffee, and the got fix thing.
+4. If it doesn't work... file an issue and I will bang my head against the wall while I fix things; or perhaps I'll just sulk, have a cup of really strong coffee, and the got fix thing.
 
 5. Be amazed how my README are either more funny or less funny with each push to the repo; YMMV.
 
